@@ -1,61 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>Formulario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 
 <body>
 
-    <header class="hero">
+    <form class="form" novalidate>
 
-        <nav class="nav">
-            <h2 class="nav__title">Tech Library</h2>
-            <div class="nav__container">
-                <input class="input" type="text" placeholder="Buscar...">
-                <figure class="btn">
-                    <img src="assets/lupa.svg" class="lupa">
-                </figure>
-            </div>
-        </nav>
+        <h2 class="form__title">Regístrate ahora</h2>
 
-        <section class="hero__main ">
-            <div class="hero__container container">
+        <article class="form__inputs">
 
-                <figure class="hero__logo">
-                    <img src="assets/search_app.svg" class="hero__img">
-                </figure>
+            <label class="form__label" data-message="" data-status="normal">
+                Name:
 
-                <div class="hero__texts">
-                    <h1 class="hero__title">Tu mejor <span class="hero__span">búsqueda</span></h1>
-                    <p class="hero__paragraph">Con Tech Library, agiliza tú búsqueda de información confiable en la web.
-                    </p>
-                    <a href="#" class="cta">Registrarme</a>
-                </div>
+                <input type="text" class="form__input" id="name" placeholder="Rachel Doe" data-text="Nombre">
 
-            </div>
-        </section>
+            </label>
 
-    </header>
+            <label class="form__label" data-message="" data-status="normal">
+                Email:
 
-    <main class="main">
+                <input type="email" class="form__input" id="email" placeholder="Hola@hola.com" data-text="Correo">
 
-        <section class="search container">
+            </label>
 
-            <article class="search__options">
-                <h2 class="search__title">Encuentra lo que buscas</h2>
-                <div class="search__images">
+            <label class="form__label" data-message="" data-status="normal">
+                Message:
 
-                </div>
-            </article>
+                <textarea class="form__input" id="message" placeholder="Type your message here..."
+                    data-text="Mensaje"></textarea>
+            </label>
 
-        </section>
+        </article>
 
-    </main>
+        <button type="submit" class="form__btn">
+            Enviar
+        </button>
 
+
+        <dialog class="form__dialog">
+            <section class="form__content">
+
+                <img src="./assets/email-illustration.svg" class="form__svg">
+
+                <h2 class="form__dialog-title">¡Registro exitoso!</h2>
+
+                <button class="form__btn form__btn--close" type="button">Enviar Otra Vez</button>
+            </section>
+        </dialog>
+
+    </form>
+
+    <script src="./app.js" type="module"></script>
 </body>
 
 </html>
